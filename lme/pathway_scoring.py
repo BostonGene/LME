@@ -7,12 +7,13 @@ from pathlib import Path
 def run_progeny(expression_df, sync_gene_names=True, prog_coeffs=None, **kwargs):
     """
     Runs PROGENy pathway scoring on provided expressions dataframe in python
+    :param sync_gene_names: update gene names for old platforms
     :param expression_df: pd.DataFrame; rows - Hugo Gene symbols, columns - samples
     :param prog_coeffs: pd.DataFrame, progeny_genes_coefficients; index - HUGO gene symbols, columns - ['pathway', 'coefficient']
     :returns progeny pathway scores dataframe
     """
     if prog_coeffs is None:
-        prog_coeffs = read_dataset(Path(__file__).resolve().parent.joinpath('databases', 'progeny_genes_coefficients.tsv'),
+        prog_coeffs = read_dataset(Path(__file__).resolve().parent.parent.joinpath('databases', 'progeny_coefficients.tsv'),
                                    index_col=None)
     if sync_gene_names:
         matching_genes = update_gene_names(genes_old=prog_coeffs['hugo_symbol'],
