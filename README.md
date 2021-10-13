@@ -21,27 +21,10 @@ _.ipynb files could by opened at https://nbviewer.jupyter.org/ or downloaded as 
 
 ![Graphical abstract](img/back.png?raw=true "Molecular Functional Portrait")
 
-> Kotlov, Nikita
-  Bagaev, Alexander
-  Revuelta, Maria V
-  Phillip, Jude M
-  Cacciapuoti, Maria Teresa
-  Antysheva, Zoya
-  Svekolkin, Viktor
-  Tikhonova, Ekaterina
-  Miheecheva, Natalia
-  Kuzkina, Natalia
-  Nos, Grigorii
-  Tabbo, Fabrizio
-  Frenkel, Felix
-  Ghione, Paola
-  Tsiper, Maria
-  Almog, Nava
-  Fowler, Nathan
-  Melnick, Ari M
-  Leonard, John P.
-  Inghirami, Giorgio
-  Cerchietti, Leandro (2021). 
+> Kotlov Nikita, Bagaev Alexander, Revuelta Maria V, Phillip Jude M, Cacciapuoti Maria Teresa,
+ Antysheva Zoya, Svekolkin Viktor, Tikhonova Ekaterina, Miheecheva Natalia, Kuzkina Natalia, 
+ Nos Grigorii, Tabbo Fabrizio, Frenkel Felix, Ghione Paola, Tsiper Maria, Almog Nava, 
+ Fowler Nathan, Melnick Ari M, Leonard John P., Inghirami Giorgio, Cerchietti Leandro (2021). 
 Clinical and biological subtypes of B-cell lymphoma revealed by microenvironmental signatures. Cancer Discovery, candisc.0839.2020. https://doi.org/10.1158/2159-8290.CD-20-0839
 
 © 2021 BostonGene Corporation.
