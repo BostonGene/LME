@@ -2,11 +2,9 @@ Copyright 2020. BostonGene Corporation. All rights reserved, except those expres
 
 ***\*\*\*Limited License and Terms of Use for Research Use by Non-Profit and Government Institutions******
 
-The BostonGene MF PortraitTM web-based tool is provided to the research community to explore the personalized tumor maps of the TCGA data utilized in our manuscript, below.
-
 As used in this limited license and terms of use, “Code” means this website, all software code running this website, all software code associated with this website, all pictorial or graphic representations of data on this website, and all software code and associated the following manuscript, no matter how the Code is accessed or obtained:
 
-> Alexander Bagaev, Nikita Kotlov, Krystle Nomie, Viktor Svekolkin, Nikita Osokin, Ivan Kozlov, Felix Frenkel, Olga Gancharova, Nava Almog, Maria Tsiper, Ravshan Ataullakhanov, Nathan Fowler, “Integrated tumor exome and transcriptome analyses reveal conserved pan-cancer microenvironment subtypes predictive of response to immunotherapy,” in press.
+> Kotlov, N., Bagaev, A., Revuelta, M. V, Phillip, J. M., Cacciapuoti, M. T., Antysheva, Z., … Cerchietti, L. (2021). Clinical and biological subtypes of B-cell lymphoma revealed by microenvironmental signatures. Cancer Discovery, candisc.0839.2020. https://doi.org/10.1158/2159-8290.CD-20-0839
 
 BY UTILIZING THE CODE, YOU ARE CONSENTING TO BE AND AGREE TO BE BOUND BY ALL OF THE TERMS OF THIS LIMITED LICENSE, WHICH FOLLOW:
 
