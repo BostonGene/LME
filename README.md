@@ -5,7 +5,7 @@
 
 1. Pan-DLBCL cohort LME types and signature scores could be found in datasets/ folder
 1. Signatures in GMT format are deposited in databases/signatures.gmt (please note that for clustering only 22 were used + 3 progeny pathways)
-1. Notebook with classification <a href="https://nbviewer.jupyter.org/github/BostonGene/LME/blob/master/classification.ipynb">Classification.ipynb</a>
+1. Notebook with classification <a href="https://nbviewer.org/github/BostonGene/LME/blob/main/classification.ipynb">Classification.ipynb</a>
 1. Classification script: classification.py
 
 _.ipynb files could by opened at https://nbviewer.jupyter.org/ or downloaded as HTML files from upstream_html folder_
