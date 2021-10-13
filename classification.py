@@ -3,7 +3,34 @@ import pandas as pd
 import numpy as np
 
 from lme.classification import KNeighborsClusterClassifier
-from lme.utils import read_gene_sets, ssgsea_formula, median_scale
+from lme.pathway_scoring import run_progeny
+from lme.utils import read_gene_sets, ssgsea_formula, median_scale, to_common_samples
+
+signatures_selected = [
+    'Lymphatic_endothelium',
+    'Angiogenesis',
+    'CAF',
+    'Fibroblastic_reticular_cells',
+    'Matrix',
+    'Matrix_remodeling',
+    'Granulocyte_traffic',
+    'Protumor_cytokines',
+    'Follicular_dendritic_cells',
+    'Macrophages',
+    'M1_signature',
+    'T_cell_traffic',
+    'MHCII',
+    'MHCI',
+    'Follicular_B_helper_T_cells',
+    'Treg',
+    'T_cells',
+    'Checkpoint_inhibition',
+    'NK_cells',
+    'B_cells_traffic',
+    'B_cells',
+    'Proliferation_rate']
+
+progeny_selected = ['NFkB', 'p53', 'PI3K']
 
 
 if __name__ == "__main__":
@@ -29,8 +56,14 @@ if __name__ == "__main__":
     cohort_annotation = pd.read_csv(args.refannot, sep='\t', index_col=0)  # Contains MFP cluster labels in MFP column
     print(f'Reference annotation provided for {len(cohort_signature_scores_scaled)} samples')
     #  Fit the model
-    MODEL = KNeighborsClusterClassifier(norm=False, scale=False, clip=2, k=35).fit(cohort_signature_scores_scaled,
-                                                                                   cohort_annotation.MFP)
+
+    cohort_ann_filtered = cohort_annotation[(cohort_annotation.Diagnosis == 'Diffuse_Large_B_Cell_Lymphoma') &
+                                            (~cohort_annotation.LME.isna())]
+    print(f'Using {len(cohort_ann_filtered)} DLBCL samples with known LME status')
+
+    LME_MODEL = KNeighborsClusterClassifier(norm=False, scale=False, clip=3, k=35).fit(
+        *to_common_samples([cohort_signature_scores_scaled[signatures_selected + progeny_selected],
+                            cohort_ann_filtered.LME]))
 
     # Load the cohort of interest
     # Read signatures
@@ -45,18 +78,14 @@ if __name__ == "__main__":
         print('Performing log2+1 transformation')
         exp = np.log2(1+exp)
 
-
-    # Calc signature scores
-    signature_scores = ssgsea_formula(exp, gmt)
-
-    # TODO add progeny
-
+    # Calc signature scores both ssgsea and progeny
+    signature_scores = pd.concat([ssgsea_formula(exp, gmt), run_progeny(exp.T).T], axis=1)
 
     # Scale signatures
     signature_scores_scaled = median_scale(signature_scores, 2)
 
     # Predict clusters
-    cluster_labels = MODEL.predict(signature_scores_scaled[MODEL.X.columns]).rename('MFP')
+    cluster_labels = LME_MODEL.predict(signature_scores_scaled[LME_MODEL.X.columns]).rename('LME')
     print('Predicted labels count:')
     print(cluster_labels.value_counts())
 
