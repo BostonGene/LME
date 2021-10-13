@@ -12,7 +12,8 @@ class GeneSet(object):
         self.genes_ordered = list(genes)
 
     def __str__(self):
-        return '{}\t{}\t{}'.format(self.name, self.descr, '\t'.join(self.genes))
+        s = ','.join(self.genes)
+        return f'{self.name} ({self.descr}): {s}'
 
     def __repr__(self):
         return self.__str__()
