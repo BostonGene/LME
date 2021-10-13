@@ -68,7 +68,7 @@ if __name__ == "__main__":
     # Load the cohort of interest
     # Read signatures
     gmt = read_gene_sets(args.gmt)  # GMT format like in MSIGdb
-    print(f'Loaded {len(gmt)} signatures')
+    print(f'Loaded {len(gmt)} signatures, using {len(signatures_selected)} selected')
 
     # Read expressions
     exp = pd.read_csv(args.exp, sep='\t', header=0, index_col=0).T  # log2+1 transformed; Genes should appear to be in rows
