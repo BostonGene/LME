@@ -79,7 +79,7 @@ if __name__ == "__main__":
         exp = np.log2(1+exp)
 
     # Calc signature scores both ssgsea and progeny
-    signature_scores = pd.concat([ssgsea_formula(exp, gmt), run_progeny(exp.T).T], axis=1)
+    signature_scores = pd.concat([ssgsea_formula(exp, gmt), run_progeny(exp)], axis=1)
 
     # Scale signatures
     signature_scores_scaled = median_scale(signature_scores, 2)
