@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Diffuse large B-cell lymphoma (DLBCL) is a biologically and clinically heterogeneous disease. Transcriptomic and genetic characterization of DLBCL has increased the understanding of its intrinsic pathogenesis and provided potential therapeutic targets. Besides the classification of the DLBCL, the Lymphoma Microenvironment (LME) classification also plays a critical role in patient clinical outcomes and response to antineoplastic therapies. The current repository gives an opportunity to analyze the gene expression data and understand which LME subtype it belongs to. The analysis is based on the ssGSEA scores of the 25 functional gene expression signatures, each of them corresponding to a specific cell type or biological process. Each LME subtype is characterized by a unique set of FGES, shown in Fig. 1.
+Diffuse large B-cell lymphoma (DLBCL) is a biologically and clinically heterogeneous disease. Transcriptomic and genetic characterization of DLBCL has increased the understanding of its intrinsic pathogenesis and provided potential therapeutic targets. Besides the classification of the DLBCL, the Lymphoma Microenvironment (LME) classification also plays a critical role in patient clinical outcomes and response to antineoplastic therapies. The current repository gives an opportunity to analyze the gene expression data and understand which LME subtype it belongs to. The analysis is based on the [ssGSEA scores](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2783335/) ("We've created a new ssGSEA calculation formula outlined in [utils.py](lme/utils.py)") of the 25 functional gene expression signatures, each of them corresponding to a specific cell type or biological process. Each LME subtype is characterized by a unique set of FGES, shown in Fig. 1.
 
 ![LME subtypes](https://github.com/BenjaminSargsyan/Preview_of_LME/assets/127855909/ae01c04d-8ccb-4850-a7d2-9f8ed3b89902)
 
@@ -32,7 +32,7 @@ If your environment is already set up accordingly, clone the Github repository t
 
 The analysis workflow is presented in the diagram below, highlighting the main steps and logical elements of the notebook.
 
-![LME workflow](https://github.com/BenjaminSargsyan/Preview_of_LME/assets/127855909/24a9ae7f-d892-4764-a3ed-d67a1d531cbd)
+![LME Workflow](https://github.com/BostonGene/LME/assets/127855909/6eb2a767-691f-423d-ab83-239c562ec06a)
 
 **Note: Only RNA-Seq data can be used as input data for the analysis.**
 
