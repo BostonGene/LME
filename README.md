@@ -32,7 +32,7 @@ If your environment is already set up accordingly, clone the Github repository t
 
 The analysis workflow is presented in the diagram below, highlighting the main steps and logical elements of the notebook.
 
-![LME Workflow](https://github.com/BostonGene/LME/assets/127855909/6eb2a767-691f-423d-ab83-239c562ec06a)
+![LME workflow](https://github.com/BostonGene/LME/assets/127855909/ae55d1d2-2eae-4295-a5d6-1579d10cc9e2)
 
 **Note: Only RNA-Seq data can be used as input data for the analysis.**
 
