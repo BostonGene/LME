@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-VENV_NAME="TME_env"
+VENV_NAME="LME_env"
 
 if [ -d "$VENV_NAME" ]
 then
