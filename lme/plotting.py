@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
+import umap
+from umap import UMAP
 
 from lme.utils import item_series, to_common_samples
 
@@ -223,7 +225,7 @@ def lin_colors(factors_vector, cmap='default', sort=True, min_v=0, max_v=1, lins
 
 def pca_plot(data, grouping=None, order=(), n_components=2, ax=None, palette=None,
              alpha=1, random_state=42, s=20, figsize=(5, 5), title='',
-             legend='in', **kwargs):
+             legend='in',pad=20, **kwargs):
     kwargs_scatter = dict()
     kwargs_scatter['linewidth'] = kwargs.pop('linewidth', 0)
     kwargs_scatter['marker'] = kwargs.pop('marker', 'o')
@@ -269,8 +271,63 @@ def pca_plot(data, grouping=None, order=(), n_components=2, ax=None, palette=Non
     elif legend == 'in':
         ax.legend(scatterpoints=1)
 
-    ax.set_title(title)
-    ax.set_xlabel(label_1)
-    ax.set_ylabel(label_2)
+    # ax.set_title(title, pad=pad)
+    # ax.set_xlabel("PCA 1")
+    # ax.set_ylabel("PCA 2")
+
+    return ax
+
+def umap_plot(data, grouping=None, order=(), n_components=30, ax=None, palette=None,
+             alpha=1, random_state=42, s=20, figsize=(5, 5), title='',
+             legend='in',pad =10, **kwargs):
+    kwargs_scatter = dict()
+    kwargs_scatter['linewidth'] = kwargs.pop('linewidth', 0)
+    kwargs_scatter['marker'] = kwargs.pop('marker', 'o')
+    kwargs_scatter['edgecolor'] = kwargs.pop('edgecolor', 'black')
+
+    if grouping is None:
+        grouping = item_series('*', data)
+
+    # Common samples
+    c_data, c_grouping = to_common_samples([data, grouping])
+
+    if len(order):
+        group_order = copy.copy(order)
+    else:
+        group_order = np.sort(c_grouping.unique())
+
+    if palette is None:
+        cur_palette = lin_colors(c_grouping)
+    else:
+        cur_palette = copy.copy(palette)
+
+    if ax is None:
+        _, ax = plt.subplots(figsize=figsize)
+
+    # Get model and transform
+    n_components = min(n_components, len(c_data.columns))
+    from sklearn.decomposition import PCA
+    model = PCA(n_components= n_components, random_state=random_state, **kwargs)
+    reducer = umap.UMAP()
+    
+    data_tmp = pd.DataFrame(model.fit_transform(c_data), index=c_data.index)
+
+    
+    data_tr = pd.DataFrame(reducer.fit_transform(data_tmp), index=c_data.index)
+    
+    kwargs_scatter = kwargs_scatter or {}
+    for group in group_order:
+        samples = list(c_grouping[c_grouping == group].index)
+        ax.scatter(data_tr[0], data_tr[1], color=cur_palette[group], s=s, alpha=alpha,
+                   label=str(group), **kwargs_scatter)
+
+    if legend == 'out':
+        ax.legend(scatterpoints=1, bbox_to_anchor=(1, 1), loc=2, borderaxespad=0.1)
+    elif legend == 'in':
+        ax.legend(scatterpoints=1)
+
+    # ax.set_title(title, pad=pad)
+    # ax.set_xlabel("UMAP 1")
+    # ax.set_ylabel("UMAP 2")
 
     return ax
