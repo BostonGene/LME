@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="460.8pt" height="345.6pt" viewBox="0 0 460.8 345.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2023-11-20T18:37:45.480801</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.7.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 345.6 
+L 460.8 345.6 
+L 460.8 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="matplotlib.axis_1">
+    <g id="text_1">
+     <text style="fill: #262626; font: 10px 'Arial', 'DejaVu Sans', 'Liberation Sans', 'Bitstream Vera Sans', sans-serif; text-anchor: middle" x="236.16" y="319.182437" transform="rotate(-0 236.16 319.182437)">LME</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2"/>
+   <g id="patch_2">
+    <path d="M 357.120064 174.528063 
+C 357.120064 158.350373 353.87456 142.33587 347.576093 127.43463 
+C 341.277626 112.53339 332.053264 99.046034 320.450252 87.772714 
+C 308.847239 76.499393 295.099658 67.66754 280.023098 61.801111 
+C 264.946538 55.934682 248.845158 53.152029 232.674187 53.618236 
+L 236.16 174.528063 
+z
+" style="fill: #1abc9c; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 232.674187 53.618236 
+C 211.796119 54.220148 191.425597 60.219593 173.554108 71.030047 
+C 155.682619 81.840501 140.912172 97.097808 130.686774 115.310366 
+C 120.461376 133.522923 115.125473 154.077233 115.200721 174.963841 
+C 115.275968 195.850448 120.759832 216.365778 131.116191 234.504186 
+L 236.16 174.528063 
+z
+" style="fill: #e74c3c; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 131.116191 234.504186 
+C 139.210389 248.680585 150.091256 261.072819 163.101717 270.932547 
+C 176.112179 280.792275 190.984964 287.91695 206.821935 291.876327 
+L 236.16 174.528063 
+z
+" style="fill: #2980b9; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 206.821935 291.876327 
+C 224.654393 296.334594 243.27069 296.669981 261.252162 292.856929 
+C 279.233635 289.043878 296.111616 281.181772 310.599914 269.869745 
+C 325.088212 258.557719 336.809204 244.090608 344.869689 227.570883 
+C 352.930173 211.051158 357.120063 192.909389 357.120064 174.528075 
+L 236.16 174.528063 
+z
+" style="fill: #9b59b6; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_2">
+    <text style="fill: #262626; font: 14px 'Arial', 'DejaVu Sans', 'Liberation Sans', 'Bitstream Vera Sans', sans-serif; text-anchor: start" x="328.879277" y="82.960304" transform="rotate(-0 328.879277 82.960304)">LME-IN</text>
+   </g>
+   <g id="text_3">
+    <text style="fill: #ffffff; font: 14px 'Arial', 'DejaVu Sans', 'Liberation Sans', 'Bitstream Vera Sans', sans-serif; text-anchor: middle" x="286.734151" y="126.337979" transform="rotate(-0 286.734151 126.337979)">25.5%</text>
+   </g>
+   <g id="text_4">
+    <text style="fill: #262626; font: 14px 'Arial', 'DejaVu Sans', 'Liberation Sans', 'Bitstream Vera Sans', sans-serif; text-anchor: end" x="120.139451" y="113.251721" transform="rotate(-0 120.139451 113.251721)">LME-DE</text>
+   </g>
+   <g id="text_5">
+    <text style="fill: #ffffff; font: 14px 'Arial', 'DejaVu Sans', 'Liberation Sans', 'Bitstream Vera Sans', sans-serif; text-anchor: middle" x="172.876064" y="142.86057" transform="rotate(-0 172.876064 142.86057)">32.8%</text>
+   </g>
+   <g id="text_6">
+    <text style="fill: #262626; font: 14px 'Arial', 'DejaVu Sans', 'Liberation Sans', 'Bitstream Vera Sans', sans-serif; text-anchor: end" x="155.795889" y="284.43612" transform="rotate(-0 155.795889 284.43612)">LME-GC</text>
+   </g>
+   <g id="text_7">
+    <text style="fill: #ffffff; font: 14px 'Arial', 'DejaVu Sans', 'Liberation Sans', 'Bitstream Vera Sans', sans-serif; text-anchor: middle" x="192.32503" y="236.233879" transform="rotate(-0 192.32503 236.233879)">12.8%</text>
+   </g>
+   <g id="text_8">
+    <text style="fill: #262626; font: 14px 'Arial', 'DejaVu Sans', 'Liberation Sans', 'Bitstream Vera Sans', sans-serif; text-anchor: start" x="318.043905" y="283.267039" transform="rotate(-0 318.043905 283.267039)">LME-ME</text>
+   </g>
+   <g id="text_9">
+    <text style="fill: #ffffff; font: 14px 'Arial', 'DejaVu Sans', 'Liberation Sans', 'Bitstream Vera Sans', sans-serif; text-anchor: middle" x="280.823948" y="235.596198" transform="rotate(-0 280.823948 235.596198)">28.9%</text>
+   </g>
+  </g>
+ </g>
+</svg>
