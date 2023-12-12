@@ -1,4 +1,5 @@
-**NOTICE OF OPEN SOUCE LICENSES, TERMS AND CONDITIONS**
+**NOTICE OF OPEN SOURCE LICENSES, TERMS AND CONDITIONS**
+
 BostonGene’s LME Software (“LME”) contains Open Source Software (“OSS”). The OSS is subject to licenses, terms, and conditions imposed by third parties holding copyrights in that OSS. BostonGene has been requested to provide the following notices about that OSS. Please consult the full text of the applicable license for additional information about licenses, terms, and conditions that apply to the OSS used in LME.
 
 
